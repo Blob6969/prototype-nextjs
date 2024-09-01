@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import TerrainIcon from '@mui/icons-material/Terrain';
 import NatureIcon from '@mui/icons-material/Nature';
 import Link from "next/link";
@@ -45,18 +46,20 @@ export function InitialScreen() {
             Plan your perfect trip with our comprehensive travel guide.
           </p>
           <div className="max-w-lg mx-auto">
-            <Select className="w-full mb-4">
-              <SelectTrigger>
-                <SelectValue placeholder="Select a city" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="delhi">Delhi</SelectItem>
-                <SelectItem value="mumbai">Mumbai</SelectItem>
-                <SelectItem value="bangalore">Bangalore</SelectItem>
-                <SelectItem value="chennai">Chennai</SelectItem>
-                <SelectItem value="kolkata">Kolkata</SelectItem>
-              </SelectContent>
-            </Select>
+            <div className="w-full mb-4"> {/* Wrapper for styling */}
+              <Select>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select a city" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="delhi">Delhi</SelectItem>
+                  <SelectItem value="mumbai">Mumbai</SelectItem>
+                  <SelectItem value="bangalore">Bangalore</SelectItem>
+                  <SelectItem value="chennai">Chennai</SelectItem>
+                  <SelectItem value="kolkata">Kolkata</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
             <Button variant="solid" className="w-full">
               Explore
             </Button>
@@ -67,7 +70,7 @@ export function InitialScreen() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">Discover Local Attractions</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Attraction 1"
                   width={400}
@@ -84,7 +87,7 @@ export function InitialScreen() {
                 </CardContent>
               </Card>
               <Card>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Attraction 2"
                   width={400}
@@ -101,7 +104,7 @@ export function InitialScreen() {
                 </CardContent>
               </Card>
               <Card>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Attraction 3"
                   width={400}
@@ -125,11 +128,11 @@ export function InitialScreen() {
         <section className="bg-muted py-12 md:py-16 lg:py-20 px-6 md:px-8 lg:px-10">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">
-              Nature's Finest <NatureIcon className="h-6 w-6 inline-block ml-2" />
+              Natures Finest <NatureIcon className="h-6 w-6 inline-block ml-2" />
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Eco-Friendly Option 1"
                   width={400}
@@ -146,7 +149,7 @@ export function InitialScreen() {
                 </CardContent>
               </Card>
               <Card>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Eco-Friendly Option 2"
                   width={400}
@@ -156,16 +159,14 @@ export function InitialScreen() {
                 />
                 <CardContent className="p-4">
                   <h3 className="text-xl font-semibold mb-2">Eco-Lodge Retreat</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Immerse yourself in nature with minimal environmental impact.
-                  </p>
+                  <p className="text-muted-foreground mb-4">Relax in eco-friendly lodges surrounded by nature.</p>
                   <Button variant="outline" size="sm">
                     Book Now
                   </Button>
                 </CardContent>
               </Card>
               <Card>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Eco-Friendly Option 3"
                   width={400}
@@ -174,8 +175,8 @@ export function InitialScreen() {
                   style={{ aspectRatio: "4 / 3", objectFit: "cover" }}
                 />
                 <CardContent className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">Sustainable Tours</h3>
-                  <p className="text-muted-foreground mb-4">Explore the city with a focus on eco-friendly practices.</p>
+                  <h3 className="text-xl font-semibold mb-2">Green Resort</h3>
+                  <p className="text-muted-foreground mb-4">Enjoy a stay at a resort committed to sustainable practices.</p>
                   <Button variant="outline" size="sm">
                     Book Now
                   </Button>
@@ -189,7 +190,7 @@ export function InitialScreen() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">Discover Local Cultural Experiences</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Cultural Experience 1"
                   width={400}
@@ -206,7 +207,7 @@ export function InitialScreen() {
                 </CardContent>
               </Card>
               <Card>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Cultural Experience 2"
                   width={400}
@@ -223,7 +224,7 @@ export function InitialScreen() {
                 </CardContent>
               </Card>
               <Card>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt="Cultural Experience 3"
                   width={400}
