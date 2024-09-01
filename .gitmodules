@@ -1,0 +1,3 @@
+[submodule "Prototype"]
+	path = Prototype
+	url = https://github.com/Blob6969/prototype-nextjs.git
